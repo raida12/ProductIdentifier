@@ -6,18 +6,18 @@ class TestModels(TestCase):
     
     def setUp(self):
         
-        self.user2 = User.objects.create_user('anik2','smnavinnayeranik@gmail.com','1234')
+        self.user2 = User.objects.create_user('raida123','raida@gmail.com','1234')
         
         self.customer2 = Customer.objects.create(
             user = self.user2,
-            name = 'anik2',
+            name = 'raida123',
             phone = '01710899896',
-            email = 'anik5758@gmail.com'
+            email = 'raida123@gmail.com'
         )
         
     
     def test_customer_model_creation(self):
-        self.assertEquals(self.customer2.user.username,'anik2')
+        self.assertEquals(self.customer2.user.username,'raida123')
         
     def test_product_model_creation(self):
         
@@ -26,4 +26,4 @@ class TestModels(TestCase):
             name = 'new product',
         )
         self.assertEquals(product.name,'new product')
-        self.assertEquals(product.customer.name,'anik2')
+        self.assertEquals(product.customer.name,'raida123')
